@@ -170,7 +170,22 @@
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
-	const STRUGGLE     ; a5
+	const BEAT_UP      ; a5
+	const NIGHT_SLASH  ; a6
+	const FLASHCANNON  ; a7
+	const IRON_TAIL    ; a8
+	const FAIRY_WIND   ; a9
+	const DAZZLEGLEAM  ; aa
+	const VEE_VOLLEY   ; ab
+	const SIZZLESLIDE  ; ac
+	const BOUNCYBUBLE  ; ad
+	const BUZZY_BUZZ   ; ae
+	const GLITZY_GLOW  ; af
+	const BADDY_BAD    ; b0
+	const FREEZYFROST  ; b1
+	const SAPPY_SEED   ; b2
+	const SPARKLSWIRL  ; b3
+	const STRUGGLE     ; b4
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

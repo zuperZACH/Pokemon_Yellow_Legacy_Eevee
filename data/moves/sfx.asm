@@ -165,6 +165,21 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $f0, $ff ; SUPER_FANG
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
+	db SFX_BATTLE_0B,          $01, $80 ; BEAT_UP
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; NIGHT_SLASH
+	db SFX_BATTLE_27,          $ff, $40 ; FLASHCANNON
+	db SFX_BATTLE_13,          $f8, $ff ; IRON_TAIL
+	db SFX_BATTLE_09,          $00, $40 ; FAIRY_WIND
+	db SFX_PSYCHIC_M,          $00, $80 ; DAZZLEGLEAM
+	db SFX_BATTLE_21,          $00, $80 ; VEE_VOLLEY
+	db SFX_BATTLE_0D,          $10, $60 ; SIZZLESLIDE
+	db SFX_BATTLE_24,          $ff, $10 ; BOUNCYBUBLE
+	db SFX_BATTLE_2E,          $12, $60 ; BUZZY_BUZZ
+	db SFX_PSYCHIC_M,          $00, $80 ; GLITZY_GLOW
+	db SFX_BATTLE_2A,          $20, $20 ; BADDY_BAD
+	db SFX_BATTLE_29,          $f0, $e0 ; FREEZYFROST
+	db SFX_BATTLE_34,          $00, $40 ; SAPPY_SEED
+	db SFX_BATTLE_12,          $00, $c0 ; SPARKLSWIRL
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

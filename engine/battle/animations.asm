@@ -823,8 +823,8 @@ DoRockSlideSpecialEffects:
 	ret nc
 	cp 8
 	jr nc, .shakeScreen
-	cp 1
-	jp z, AnimationFlashScreen ; if it's the end of the subanimation, flash the screen
+	;cp 1
+	;jp z, AnimationFlashScreen ; if it's the end of the subanimation, flash the screen
 	ret
 ; if the subanimation counter is between 8 and 11, shake the screen horizontally and vertically
 .shakeScreen
@@ -835,14 +835,14 @@ DoRockSlideSpecialEffects:
 
 FlashScreenEveryEightFrameBlocks:
 	ld a, [wSubAnimCounter]
-	and 7 ; is the subanimation counter exactly 8?
+	and 14 ; is the subanimation counter exactly 8?
 	call z, AnimationFlashScreen ; if so, flash the screen
 	ret
 
 ; flashes the screen if the subanimation counter is divisible by 4
 FlashScreenEveryFourFrameBlocks:
 	ld a, [wSubAnimCounter]
-	and 3
+	and 14
 	call z, AnimationFlashScreen
 	ret
 
@@ -850,23 +850,23 @@ FlashScreenEveryFourFrameBlocks:
 DoExplodeSpecialEffects:
 	ld a, [wSubAnimCounter]
 	cp 1 ; is it the end of the subanimation?
-	jr nz, FlashScreenEveryFourFrameBlocks
+	;jr nz, FlashScreenEveryFourFrameBlocks
 ; if it's the end of the subanimation, make the attacking pokemon disappear
 	hlcoord 1, 5
 	jp AnimationHideMonPic ; make pokemon disappear
 
 ; flashes the screen when subanimation counter is 1 modulo 4
 DoBlizzardSpecialEffects:
-	ld a, [wSubAnimCounter]
-	cp 13
-	jp z, AnimationFlashScreen
-	cp 9
-	jp z, AnimationFlashScreen
-	cp 5
-	jp z, AnimationFlashScreen
-	cp 1
-	jp z, AnimationFlashScreen
-	ret
+;	ld a, [wSubAnimCounter]
+;	cp 13
+;	jp z, AnimationFlashScreen
+;	cp 9
+;	jp z, AnimationFlashScreen
+;	cp 5
+;	jp z, AnimationFlashScreen
+;	cp 1
+;	jp z, AnimationFlashScreen
+;	ret
 
 ; flashes the screen at 3 points in the subanimation
 ; unused
@@ -1005,7 +1005,7 @@ CallWithTurnFlipped:
 
 ; flashes the screen for an extended period (48 frames)
 AnimationFlashScreenLong:
-	ld a, 3 ; cycle through the palettes 3 times
+	ld a, 2 ; cycle through the palettes 3 times
 	ld [wFlashScreenLongCounter], a
 	ld a, [wOnSGB] ; running on SGB?
 	and a
@@ -1083,12 +1083,12 @@ AnimationFlashScreen:
 	ld a, %00011011 ; 0, 1, 2, 3 (inverted colors)
 	ldh [rBGP], a
 	call UpdateGBCPal_BGP
-	ld c, 2
+	ld c, 10
 	call DelayFrames
 	xor a ; white out background
 	ldh [rBGP], a
 	call UpdateGBCPal_BGP
-	ld c, 2
+	ld c, 10
 	call DelayFrames
 	pop af
 	ldh [rBGP], a ; restore initial palette

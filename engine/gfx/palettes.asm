@@ -346,14 +346,6 @@ YellowIntroPaletteAction::
 	inc hl
 	ld a, [hli]
 	call GetGBCBasePalAddress
-	ld a, e
-	ld [wGBCBasePalPointers + 2], a
-	ld a, d
-	ld [wGBCBasePalPointers + 2 + 1], a
-	xor a ; CONVERT_BGP
-	call DMGPalToGBCPal
-	ld a, 1
-	call TransferCurBGPData
 	ret
 
 LoadOverworldPikachuFrontpicPalettes::

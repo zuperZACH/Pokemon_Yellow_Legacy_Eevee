@@ -499,11 +499,11 @@ BlackbeltData:
 
 Rival1Data:
 ; Oak's Lab
-	db 5, EEVEE, 0
+	db 5, PIKACHU, 0
 ; Route 22
-	db $FF, 9, SPEAROW, 8, EEVEE, 0
+	db $FF, 9, SPEAROW, 8, PIKACHU, 0
 ; Cerulean City
-	db $FF, 18, SPEAROW, 15, RATTATA, 15, BELLSPROUT, 19, EEVEE, 0
+	db $FF, 18, SPEAROW, 15, RATTATA, 15, BELLSPROUT, 19, PIKACHU, 0
 
 ProfOakData:
 ; Postgame Fight

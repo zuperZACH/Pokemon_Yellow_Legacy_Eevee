@@ -9,7 +9,7 @@ PokemonMansion2FWildMons:
 	db 42, MUK
 	db 40, MAGMAR
 	db 42, MAGMAR
-	db 45, MAGMAR
+	db 45, FLAREON
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

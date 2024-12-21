@@ -231,9 +231,13 @@ FreezeBurnParalyzeEffect:
 	ld b, 10 percent + 1
 	jr .regular_effectiveness
 .asm_3f2c7
-	cp PARALYZE_SIDE_EFFECT1 + 1
+	cp PARALYZE_SIDE_EFFECT1
 	ld b, 10 percent + 1
 	jr c, .regular_effectiveness
+	cp PARALYZE_SIDE_EFFECT3
+	jr z, .paralyze1
+	cp BURN_SIDE_EFFECT3
+	jr z, .burn1
 ; extra effectiveness
 	ld b, 30 percent + 1
 	sub BURN_SIDE_EFFECT2 - BURN_SIDE_EFFECT1 ; treat extra effective as regular from now on
@@ -248,7 +252,7 @@ FreezeBurnParalyzeEffect:
 	jr z, .burn1
 	cp FREEZE_SIDE_EFFECT
 	jr z, .freeze1
-; .paralyze1
+.paralyze1
 	ld a, 1 << PAR
 	ld [wEnemyMonStatus], a
 	call QuarterSpeedDueToParalysis ; quarter speed of affected mon
@@ -294,9 +298,13 @@ FreezeBurnParalyzeEffect:
 	ld b, 10 percent + 1
 	jr .regular_effectiveness2
 .asm_3f341
-	cp PARALYZE_SIDE_EFFECT1 + 1
+	cp PARALYZE_SIDE_EFFECT1
 	ld b, 10 percent + 1
 	jr c, .regular_effectiveness2
+	cp PARALYZE_SIDE_EFFECT3
+	jr z, .paralyze1
+	cp BURN_SIDE_EFFECT3
+	jr z, .burn1
 ; extra effectiveness
 	ld b, 30 percent + 1
 	sub BURN_SIDE_EFFECT2 - BURN_SIDE_EFFECT1 ; treat extra effective as regular from now on
@@ -1154,6 +1162,9 @@ TrappingEffect:
 MistEffect:
 	jpfar MistEffect_
 
+MistSideEffect:
+	jpfar MistEffect2_
+
 FocusEnergyEffect:
 	jpfar FocusEnergyEffect_
 
@@ -1328,6 +1339,9 @@ MimicLearnedMoveText:
 LeechSeedEffect:
 	jpfar LeechSeedEffect_
 
+LeechSeedSideEffect:
+	jpfar LeechSeedEffect2_
+
 SplashEffect:
 	call PlayCurrentMoveAnimation
 	jp PrintNoEffectText
@@ -1428,6 +1442,9 @@ ConversionEffect:
 HazeEffect:
 	jpfar HazeEffect_
 
+HazeSideEffect:
+	jpfar HazeEffect2_
+
 HealEffect:
 	jpfar HealEffect_
 
@@ -1436,6 +1453,9 @@ TransformEffect:
 
 ReflectLightScreenEffect:
 	jpfar ReflectLightScreenEffect_
+
+RflctLghtScrnSideEffect:
+	jpfar RflctLghtScrnSideEffect_
 
 NothingHappenedText:
 	text_far _NothingHappenedText

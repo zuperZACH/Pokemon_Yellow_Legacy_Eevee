@@ -91,4 +91,11 @@
 	const LEECH_SEED_EFFECT          ; $54
 	const SPLASH_EFFECT              ; $55
 	const DISABLE_EFFECT             ; $56
+	const PARALYZE_SIDE_EFFECT3      ; $57
+	const BURN_SIDE_EFFECT3          ; $58
+	const LIGHT_SCREEN_SIDE_EFFECT   ; $59
+	const REFLECT_SIDE_EFFECT        ; $5A
+	const LEECH_SEED_SIDE_EFFECT     ; $5B
+	const HAZE_SIDE_EFFECT           ; $5C
+	const MIST_SIDE_EFFECT           ; $5D
 DEF NUM_MOVE_EFFECTS EQU const_value - 1

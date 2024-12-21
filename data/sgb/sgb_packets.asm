@@ -166,7 +166,7 @@ MaskEnCancelPacket: MASK_EN 0
 
 DataSndPacket1:
 	DATA_SND $85d, $0, 11
-	db  $8C                 ; cpx #$8c (2)
+	db  $8A                 ; cpx #$8c (2)
 	db  $D0, $F4            ; bne -$0c
 	db  $60                 ; rts
 	ds  7, 0

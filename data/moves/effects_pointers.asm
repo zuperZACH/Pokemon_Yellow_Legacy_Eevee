@@ -87,4 +87,11 @@ MoveEffectPointerTable:
 	dw LeechSeedEffect           ; LEECH_SEED_EFFECT
 	dw SplashEffect              ; SPLASH_EFFECT
 	dw DisableEffect             ; DISABLE_EFFECT
+	dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT3
+	dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT3
+	dw RflctLghtScrnSideEffect   ; LIGHT_SCREEN_SIDE_EFFECT
+	dw RflctLghtScrnSideEffect   ; REFLECT_SIDE_EFFECT
+	dw LeechSeedSideEffect       ; LEECH_SEED_SIDE_EFFECT
+	dw HazeSideEffect            ; HAZE_SIDE_EFFECT
+	dw MistSideEffect            ; MIST_SIDE_EFFECT
 	assert_table_length NUM_MOVE_EFFECTS

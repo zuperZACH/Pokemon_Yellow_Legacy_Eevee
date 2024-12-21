@@ -610,17 +610,6 @@ YellowIntroScene14:
 YellowIntroScene15:
 	call YellowIntro_CheckFrameTimerDecrement
 	jr c, .expired
-	ld a, [wYellowIntroSceneTimer]
-	and $3
-	ret nz
-	ldh a, [rOBP0]
-	xor $ff
-	ldh [rOBP0], a
-	ldh a, [rBGP]
-	xor $3
-	ldh [rBGP], a
-	call UpdateGBCPal_BGP
-	call UpdateGBCPal_OBP0
 	ret
 
 .expired
