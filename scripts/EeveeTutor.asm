@@ -4,6 +4,15 @@
 ; https://abcboy101.github.io/poke-corpus/#file=lgpe.sub_event_073
 
 EeveeTutorText::
+	; Progressgating to post-Misty.
+	; Zach didn't want Buzzy Buzz accessible for the Misty fight.
+	CheckEvent EVENT_BEAT_MISTY
+	jr nz, .goForthMyChild
+	ld hl, EeveeTutorNotReady
+	call PrintText
+	jp .end
+	
+.goForthMyChild
 	; Check if the player has talked to the Tutor before.
 	; This code is very janky and probably has a better way of doing things but it worked in KEP and I'm sure it's fine.
 	CheckEvent EVENT_TALKED_TO_EEVEE_TUTOR ; So we first check if this flag has been hit.
@@ -129,6 +138,7 @@ EeveeTutorText::
 .exit
 	ld hl, EeveeTutorByeText
 	call PrintText
+.end ; for progressgater
 	jp TextScriptEnd
 
 EeveeTutorPreamble:
@@ -161,4 +171,8 @@ EeveeTutorByeText:
 
 EeveeTutorNoMovesText:
 	text_far _EeveeTutorNoMovesText
+	text_end
+
+EeveeTutorNotReady:
+	text_far _EeveeTutorNotReady
 	text_end
