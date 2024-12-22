@@ -9,6 +9,7 @@ CeladonPokecenter_TextPointers:
 	dw_const CeladonPokecenterBeautyText,           TEXT_CELADONPOKECENTER_BEAUTY
 	dw_const CeladonPokecenterLinkReceptionistText, TEXT_CELADONPOKECENTER_LINK_RECEPTIONIST
 	dw_const CeladonPokecenterChanseyText,          TEXT_CELADONPOKECENTER_CHANSEY
+	dw_const CeladonPokecenterEeveeTutorText,       TEXT_CELADONPOKECENTER_EEVEETUTOR
 
 CeladonPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
@@ -28,3 +29,11 @@ CeladonPokecenterChanseyText:
 	text_asm
 	callfar PokecenterChanseyText
 	jp TextScriptEnd
+
+; see scripts\FuchsiaPokecenter.asm
+CeladonPokecenterEeveeTutorText:
+	text_asm
+	ld b, Bank(EeveeTutorText)
+	call Bankswitch
+	farcall EeveeTutorText
+	ret

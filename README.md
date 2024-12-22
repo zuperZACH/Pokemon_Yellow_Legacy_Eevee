@@ -46,6 +46,8 @@ These videos also provide an overview of the hack and the ideology behind it:
 - **Discord:** [pret][discord]
 - **IRC:** [libera#pret][irc]
 
+## Credits for Yellow Legacy Eevee:
+- Plague von Karma - Developing the Eevee Tutor, in part using [Kanto Expansion Pak](https://github.com/PlagueVonKarma/kep-hack) optimisations.
 
 ## Credits For Yellow Legacy:
 

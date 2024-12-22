@@ -259,6 +259,7 @@ INCLUDE "text/move_deleter.asm"
 INCLUDE "text/move_relearner.asm"
 INCLUDE "text/ChampionsRoom.asm"
 INCLUDE "text/Route9.asm"
+INCLUDE "text/EeveeTutor.asm"
 
 INCLUDE "data/text/text_9.asm"
 

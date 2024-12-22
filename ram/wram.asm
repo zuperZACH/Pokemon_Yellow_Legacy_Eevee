@@ -1887,7 +1887,7 @@ wSerialPlayerDataBlock:: ; ds $1a8
 ; that case, this would be ESCAPE_ROPE.
 wPseudoItemID:: db
 
-wUnusedD153:: db
+wEeveeTutorFunVariable:: db ; Took an unused WRAM entry for use with the Eevee Tutor.
 
 	ds 2
 
