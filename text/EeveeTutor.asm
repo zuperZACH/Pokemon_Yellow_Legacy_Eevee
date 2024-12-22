@@ -52,3 +52,14 @@ _EeveeTutorByeText::
 _EeveeTutorNoMovesText::
 	text "That's no EEVEE!"
 	done
+
+; We don't want the player to get Buzzy Buzz right before Misty, so we're progressgating it.
+; This is distinctly different from LGPE.
+_EeveeTutorNotReady::
+	text "Hmm, your EEVEE"
+	line "has potential."
+	
+	para "Beat MISTY, and"
+	line "I'll teach it"
+	cont "something cool!"
+	done
