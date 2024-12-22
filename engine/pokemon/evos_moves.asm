@@ -500,6 +500,163 @@ Func_3b10f:
 	scf
 	ret
 
+; Dear all of my ancestors, all of my khaverim, and all of my wladwyr.
+; I apologise for bringing shame upon yourselves with such horrible code.
+; Yours sincerely, Plague von Karma.
+
+; Eevee has several special moves only learnable through Move Tutors.
+; Cerulean City - Bouncy Bubble, Buzzy Buzz, Sizzly Slide
+; Celadon City - Baddy Bad, Glitzy Glow
+; Fuchsia City - Freezy Frost, Sappy Seed, Sparkly Swirl
+; The new list will prepare lists specifically for the purpose instead of the whole feature. 
+; Naturally, this also removes some unnecessary pieces from the original function.
+; ~ Plague von Karma
+
+; This is a mini pointer table that will be used based on the location you find the tutor in.
+; It's a 2-width as it makes working with some of the vestigial code easier, which uses level + move to determine eligibility. 2 is chosen as it's the lowest possible level before you start getting underflow glitches. I'm accounting for all possible Eevees the player can obtain naturally.
+EeveeMovesPointerTable:
+	table_width 2, EeveeMovesPointerTable
+	dw PartnerEeveeCeruleanMoves
+	dw PartnerEeveeCeladonMoves
+	dw PartnerEeveeFuchsiaMoves
+	assert_table_length 3
+
+PartnerEeveeCeruleanMoves:
+	db 2, BOUNCYBUBLE
+	db 2, BUZZY_BUZZ
+	db 2, SIZZLESLIDE
+	db 0 ; end
+
+PartnerEeveeCeladonMoves:
+	db 2, BADDY_BAD
+	db 2, GLITZY_GLOW
+	db 2, VEE_VOLLEY ; This is normally used by shaking the controller, but here, it's a tutor move, which also means we can skip some machine cycles checking your location again later.
+	db 0 ; end
+
+PartnerEeveeFuchsiaMoves:
+	db 2, FREEZYFROST
+	db 2, SAPPY_SEED
+	db 2, SPARKLSWIRL
+	db 0 ; end
+
+; Modified Move Relearner Code, applied to Eevee for the special moves. Uses KEP optimisations as well.
+;joenote - custom function by Mateo for move relearner
+PrepareEeveeMoveList::
+; Loads relearnable move list to wRelearnableMoves.
+; Input: Player Location - [wCurMap]
+; Usually, the Pokemon ID in this code is, well, the Pokemon's.
+; But since we know the Pokemon is Eevee, we don't need to be concerned about this.
+; Instead, we're using your location.
+; CERULEAN_POKECENTER - $40
+; CELADON_POKECENTER - $85
+; FUCHSIA_POKECENTER - $9A
+	; Load [wCurMap] to find the correct pointer.
+	ld a, [wCurMap]
+	cp FUCHSIA_POKECENTER
+	jr z, .fuchsia
+	cp CELADON_POKECENTER
+	jr z, .celadon
+	; must be Cerulean or an error, so let's use Cerulean as the handler for both cases.
+	ld a, 0 ; this is not a mistype - these variables start at 0
+	jr .foundLocation
+
+.fuchsia
+	ld a, 2
+	jr .foundLocation
+.celadon
+	ld a, 1
+	; fallthrough
+.foundLocation
+	ld [wEeveeTutorFunVariable], a
+	ld a, [wEeveeTutorFunVariable]
+	ld c, a
+	ld b, 0
+	ld hl, EeveeMovesPointerTable
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a  ; hl = pointer to evos moves data for our mon - we solved this just now.
+	push hl
+	
+	; Get pointer to mon's currently-known moves.
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Level
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld a, [hl]
+	ld b, a
+	push bc
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Moves
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	pop bc
+	ld d, h
+	ld e, l
+	pop hl
+	; Write list of relearnable moves, while keeping count along the way.
+	; de = pointer to mon's currently-known moves
+	; hl = pointer to moves data for our mon
+	;  b = usually the Pokemon's level
+	ld c, 3 ; Count of relearnable moves. Making Vee Volley a Celadon move makes this always 3, thanks Zach!
+.loop
+	ld a, [hli]
+	and a
+	jr z, .done
+	cp b
+	jr c, .addMove
+	jr nz, .done
+.addMove
+	push bc
+	ld a, [hli] ; move id
+	ld b, a
+	; Check if move is already known by our mon.
+	push de
+	ld a, [de]
+	cp b
+	jr z, .knowsMove
+	inc de
+	ld a, [de]
+	cp b
+	jr z, .knowsMove
+	inc de
+	ld a, [de]
+	cp b
+	jr z, .knowsMove
+	inc de
+	ld a, [de]
+	cp b
+	jr z, .knowsMove
+.relearnableMove
+	pop de
+	push hl
+	; Add move to the list, and update the running count.
+	ld a, b
+	ld b, 0
+	ld hl, wMoveBuffer + 1
+	add hl, bc
+	ld [hl], a
+	pop hl
+	pop bc
+	inc c
+	jr .loop
+.knowsMove
+	pop de
+	pop bc
+	jr .loop
+.done
+	ld b, 0
+	ld hl, wMoveBuffer + 1
+	add hl, bc
+	ld a, $ff
+	ld [hl], a
+	ld hl, wMoveBuffer
+	ld [hl], c
+	xor a
+	ld [wEeveeTutorFunVariable], a ; 0 this out to handle any potential memory leaks, and in case zach wants to use the variable for something else later
+	ret
+
 ; writes the moves a mon has at level [wCurEnemyLVL] to [de]
 ; move slots are being filled up sequentially and shifted if all slots are full
 WriteMonMoves:

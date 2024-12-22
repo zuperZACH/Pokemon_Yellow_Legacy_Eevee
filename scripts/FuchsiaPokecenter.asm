@@ -19,6 +19,7 @@ FuchsiaPokecenter_TextPointers:
 	dw_const FuchsiaPokecenterCooltrainerFText,     TEXT_FUCHSIAPOKECENTER_COOLTRAINER_F
 	dw_const FuchsiaPokecenterLinkReceptionistText, TEXT_FUCHSIAPOKECENTER_LINK_RECEPTIONIST
 	dw_const FuchsiaPokecenterChanseyText,          TEXT_FUCHSIAPOKECENTER_CHANSEY
+	dw_const FuchsiaPokecenterEeveeTutorText,       TEXT_FUCHSIAPOKECENTER_EEVEETUTOR
 	dw_const NurseJoyAfterBattleText,       		TEXT_FUCHSIAPOKECENTER_POST_BATTLE
 
 FuchsiaPokecenterScript0:
@@ -109,3 +110,12 @@ FuchsiaPokecenterChanseyText:
 	text_asm
 	callfar PokecenterChanseyText
 	jp TextScriptEnd
+
+; I am almost 100% sure this can be done better. In KEP, we had the move tutor callable from anywhere, but here, we have to use a text pointer and then farcall like this. It's very inefficient, but works. I'm not sure why the new infrastructure seems to make my old coding style nonfunctional...
+; Either that, or I'm misinterpreting how my old code worked, and I'm actually a genius.
+FuchsiaPokecenterEeveeTutorText:
+	text_asm
+	ld b, Bank(EeveeTutorText)
+	call Bankswitch
+	farcall EeveeTutorText
+	ret
