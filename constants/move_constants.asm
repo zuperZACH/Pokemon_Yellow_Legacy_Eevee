@@ -174,7 +174,6 @@
 	const NIGHT_SLASH  ; a6
 	const FLASHCANNON  ; a7
 	const IRON_TAIL    ; a8
-	const FAIRY_WIND   ; a9
 	const DAZZLEGLEAM  ; aa
 	const VEE_VOLLEY   ; ab
 	const SIZZLESLIDE  ; ac

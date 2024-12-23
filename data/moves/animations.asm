@@ -168,7 +168,6 @@ AttackAnimationPointers:
 	dw NightSlashAnim
 	dw FlashCannonAnim
 	dw IronTailAnim
-	dw FairyWindAnim
 	dw DazzleGleamAnim
 	dw VeeVolleyAnim
 	dw SizzleSlideAnim
@@ -893,7 +892,6 @@ LightScreenAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-FairyWindAnim:
 HazeAnim:
 	battle_anim NO_MOVE, SE_DARKEN_MON_PALETTE
 	battle_anim SURF, SE_WATER_DROPLETS_EVERYWHERE

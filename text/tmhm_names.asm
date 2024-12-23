@@ -11,7 +11,7 @@ tmhmNames::
 	db "TM04 FLMTHWR@"
 	db "TM05 MEGKICK@"
 	db "TM06 TOXIC@"
-	db "TM07 HRNDRIL@"
+	db "TM07 IRNTAIL@"
 	db "TM08 BDYSLAM@"
 	db "TM09 TAKEDWN@"
 	db "TM10 DBLEDGE@"

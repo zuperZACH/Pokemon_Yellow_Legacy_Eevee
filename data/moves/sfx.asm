@@ -169,7 +169,6 @@ MoveSoundTable:
 	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; NIGHT_SLASH
 	db SFX_BATTLE_27,          $ff, $40 ; FLASHCANNON
 	db SFX_BATTLE_13,          $f8, $ff ; IRON_TAIL
-	db SFX_BATTLE_09,          $00, $40 ; FAIRY_WIND
 	db SFX_PSYCHIC_M,          $00, $80 ; DAZZLEGLEAM
 	db SFX_BATTLE_21,          $00, $80 ; VEE_VOLLEY
 	db SFX_BATTLE_0D,          $10, $60 ; SIZZLESLIDE

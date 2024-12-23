@@ -168,7 +168,6 @@ MoveNames::
 	li "NIGHT SLASH"
 	li "FLASH CANNON"
 	li "IRON TAIL"
-	li "FAIRY WIND"
 	li "DAZZLE GLEAM"
 	li "VEE VOLLEY"
 	li "SIZZLY SLIDE"

@@ -3,7 +3,7 @@
 	db  65, 100,  70, 115,  80
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
+	db NORMAL, FIRE ; type
 	db 60 ; catch rate
 	db 192 ; base exp
 
@@ -14,7 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm FLAMETHROWER, TOXIC, HORN_DRILL, BODY_SLAM, TAKE_DOWN,  DOUBLE_EDGE,  \
+	tmhm FLAMETHROWER, TOXIC, IRON_TAIL,  BODY_SLAM, TAKE_DOWN,  DOUBLE_EDGE,  \
 	     HYPER_BEAM,   RAGE,         MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         \
 	     SUBSTITUTE
