@@ -199,7 +199,7 @@ _CeladonGymAfterBattleText5::
 
 _CeladonGymBattleText6::
 	text "Don't bring any"
-	line "bugs or fire"
+	line "fire or bird"
 	cont "#MON in here!"
 	done
 
@@ -209,14 +209,16 @@ _CeladonGymEndBattleText6::
 	prompt
 
 _CeladonGymAfterBattleText6::
-	text "Our LEADER, ERIKA,"
-	line "might be quiet,"
-	cont "but she's also"
-	cont "very skilled!"
+	text "I don't like bugs"
+	line "very much."
 
-	para "You better"
-	line "watch out for"
-	cont "her SOLARBEAM!"
+	para "But ERIKA says"
+	line "they're good for"
+	cont "plants."
+
+	para "I wonder if she"
+	line "uses any bug"
+	cont "#MON..."
 	done
 
 _CeladonGymBattleText7::

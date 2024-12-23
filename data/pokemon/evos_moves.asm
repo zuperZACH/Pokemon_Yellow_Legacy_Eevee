@@ -1809,11 +1809,11 @@ ButterfreeEvosMoves:
 	db 14, STUN_SPORE
 	db 15, SLEEP_POWDER
 	db 18, SUPERSONIC
-	db 24, GUST
+	db 20, GUST
 	db 24, PSYBEAM
 	db 28, WHIRLWIND
 	db 32, PSYCHIC_M
-	db 37, DREAM_EATER
+	db 40, DREAM_EATER
 	db 0
 
 MachampEvosMoves:
