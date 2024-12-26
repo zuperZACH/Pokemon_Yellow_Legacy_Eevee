@@ -1803,8 +1803,8 @@ ButterfreeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 10, CONFUSION
-	db 12, LEECH_LIFE
+	db 10, LEECH_LIFE
+	db 12, CONFUSION
 	db 13, POISONPOWDER
 	db 14, STUN_SPORE
 	db 15, SLEEP_POWDER
