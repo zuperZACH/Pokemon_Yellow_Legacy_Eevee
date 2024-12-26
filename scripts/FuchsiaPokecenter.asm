@@ -115,7 +115,5 @@ FuchsiaPokecenterChanseyText:
 ; Either that, or I'm misinterpreting how my old code worked, and I'm actually a genius.
 FuchsiaPokecenterEeveeTutorText:
 	text_asm
-	ld b, Bank(EeveeTutorText)
-	call Bankswitch
 	farcall EeveeTutorText
 	ret
