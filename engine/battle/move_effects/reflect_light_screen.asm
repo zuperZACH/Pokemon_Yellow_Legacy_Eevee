@@ -45,13 +45,11 @@ RflctLghtScrnSideEffect_:
 	cp LIGHT_SCREEN_SIDE_EFFECT
 	jr nz, .reflect
 	bit HAS_LIGHT_SCREEN_UP, [hl] ; is mon already protected by light screen?
-	jr nz, .moveFailed
 	set HAS_LIGHT_SCREEN_UP, [hl] ; mon is now protected by light screen
 	ld hl, LightScreenProtectedText
 	jr .playAnim
 .reflect
 	bit HAS_REFLECT_UP, [hl] ; is mon already protected by reflect?
-	jr nz, .moveFailed
 	set HAS_REFLECT_UP, [hl] ; mon is now protected by reflect
 	ld hl, ReflectGainedArmorText
 .playAnim
