@@ -60,6 +60,7 @@ LeechSeedEffect2_:
 .moveMissed
 	ld c, 50
 	call DelayFrames
+	ld hl, EvadedAttackText
 	jp PrintText
 
 WasSeededText:
