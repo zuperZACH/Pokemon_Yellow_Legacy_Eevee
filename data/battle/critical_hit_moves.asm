@@ -4,5 +4,4 @@ HighCriticalMoves:
 	db CRABHAMMER
 	db SLASH
 	db NIGHT_SLASH
-	db VEE_VOLLEY
 	db -1 ; end
