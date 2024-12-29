@@ -235,7 +235,7 @@ SpecialTrainerMoves:
 	db 1, 2, DIG
 	db 1, 3, SCREECH
 	db 1, 4, TAKE_DOWN
-	db 2, 1, MEGA_PUNCH
+	db 2, 1, BITE
 	db 2, 2, SUBMISSION
 	db 3, 1, BONE_CLUB
 	db 3, 2, HEADBUTT
