@@ -104,3 +104,9 @@ _SSAnne1FRoomsGentleman3Text::
 	para "I'm on the trail"
 	line "of TEAM ROCKET!"
 	done
+
+_SSAnneNurseDone::
+	text "Thank you for"
+	line "choosing the"
+	cont "S.S. ANNE!"
+	done
