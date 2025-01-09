@@ -599,7 +599,7 @@ PrepareEeveeMoveList::
 	; de = pointer to mon's currently-known moves
 	; hl = pointer to moves data for our mon
 	;  b = usually the Pokemon's level
-	ld c, 3 ; Count of relearnable moves. Making Vee Volley a Celadon move makes this always 3, thanks Zach!
+	ld c, 0 ; Move list index. Making Vee Volley a Celadon move makes this always 3, thanks Zach!
 .loop
 	ld a, [hli]
 	and a

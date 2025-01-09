@@ -1,7 +1,7 @@
 _SummerBeachHouseSurfinDudeText1::
 	text "Whoa!"
 
-	para "Your PIKACHU knows"
+	para "Your EEVEE knows"
 	line "how to SURF! So,"
 	cont "I'm not alone..."
 
@@ -27,7 +27,7 @@ _SummerBeachHouseSurfinDudeText4::
 	done
 
 _SummerBeachHousePikachuText::
-	text "PIKACHU: Pikaa"
+	text "EEVEE: Eevui?"
 	done
 
 _SummerBeachHousePoster1Text1::

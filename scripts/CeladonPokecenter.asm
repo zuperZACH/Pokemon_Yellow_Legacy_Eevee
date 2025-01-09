@@ -33,7 +33,5 @@ CeladonPokecenterChanseyText:
 ; see scripts\FuchsiaPokecenter.asm
 CeladonPokecenterEeveeTutorText:
 	text_asm
-	ld b, Bank(EeveeTutorText)
-	call Bankswitch
 	farcall EeveeTutorText
 	ret

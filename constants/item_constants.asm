@@ -163,7 +163,7 @@ DEF TM01 EQU const_value
 	add_tm FLAMETHROWER ; $CC
 	add_tm MEGA_KICK    ; $CD
 	add_tm TOXIC        ; $CE
-	add_tm HORN_DRILL   ; $CF
+	add_tm IRON_TAIL    ; $CF
 	add_tm BODY_SLAM    ; $D0
 	add_tm TAKE_DOWN    ; $D1
 	add_tm DOUBLE_EDGE  ; $D2
