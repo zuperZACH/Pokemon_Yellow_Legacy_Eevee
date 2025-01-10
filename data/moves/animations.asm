@@ -711,6 +711,13 @@ ThunderBoltAnim:
 	db -1 ; end
 
 BuzzyBuzzAnim:
+	battle_anim THUNDER_WAVE, SUBANIM_0_STATUS_PARALYZED, 0, 4
+	battle_anim NO_MOVE, SUBANIM_0_STATUS_PARALYZED, 0, 4
+	battle_anim NO_MOVE, SE_MOVE_MON_HORIZONTALLY
+	battle_anim THUNDERSHOCK, SUBANIM_1_LIGHTNING_BALL, 1, 2
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	db -1 ; end
+
 ThunderWaveAnim:
 	battle_anim THUNDER_WAVE, SUBANIM_1_LIGHTNING_BALL, 1, 2
 	battle_anim NO_MOVE, SUBANIM_0_BIND, 0, 2

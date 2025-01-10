@@ -26,6 +26,7 @@ SSAnne1FRooms_TextPointers:
 	dw_const SSAnne1FRoomsGirl2Text,         TEXT_SSANNE1FROOMS_GIRL2
 	dw_const PickUpItemText,                 TEXT_SSANNE1FROOMS_TM_BODY_SLAM
 	dw_const SSAnne1FRoomsGentleman3Text,    TEXT_SSANNE1FROOMS_GENTLEMAN3
+	dw_const SSAnne1FRoomsHealerText,		 TEXT_SSANNE1FROOMS_HEALER
 
 SSAnne8TrainerHeaders:
 	def_trainers
@@ -136,4 +137,19 @@ SSAnne1FRoomsGirl2Text:
 
 SSAnne1FRoomsGentleman3Text:
 	text_far _SSAnne1FRoomsGentleman3Text
+	text_end
+
+SSAnne1FRoomsHealerText:
+	text_far SilphCo9FNurseYouLookTiredText
+	text_asm
+	predef HealParty
+	call GBFadeOutToWhite
+	call Delay3
+	call GBFadeInFromWhite
+	ld hl, SSAnneNurseDone
+	call PrintText
+	jp TextScriptEnd
+
+SSAnneNurseDone:
+	text_far _SSAnneNurseDone
 	text_end
