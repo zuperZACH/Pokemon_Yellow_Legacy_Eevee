@@ -1521,7 +1521,7 @@ EeveeEvosMoves:
 	db 30, FOCUS_ENERGY
 	db 36, JUMP_KICK
 	db 41, TAKE_DOWN
-	db 50, VEE_VOLLEY
+	db 50, GROWTH
 	db 0
 
 FlareonEvosMoves:
