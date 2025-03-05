@@ -264,14 +264,14 @@ SpearowEvosMoves:
 	db 0
 ; Learnset
 	db 7, LEER
-	db 10, FURY_ATTACK
-	db 14, FOCUS_ENERGY
-	db 18, BEAT_UP
+	db 10, FOCUS_ENERGY
+	db 14, BEAT_UP
+	db 18, FURY_ATTACK
 	db 21, MIRROR_MOVE
-	db 24, DRILL_PECK
-	db 28, WHIRLWIND
-	db 30, SHARPEN
-	db 40, AGILITY
+	db 24, WHIRLWIND
+	db 28, DRILL_PECK
+	db 30, AGILITY
+	db 40, SHARPEN
 	db 0
 
 VoltorbEvosMoves:
@@ -684,15 +684,15 @@ FearowEvosMoves:
 	db 0
 ; Learnset
 	db 7, LEER
-	db 10, FURY_ATTACK
-	db 14, FOCUS_ENERGY
-	db 18, BEAT_UP
+	db 10, FOCUS_ENERGY
+	db 14, BEAT_UP
+	db 18, FURY_ATTACK
 	db 20, MIRROR_MOVE
-	db 24, DRILL_PECK
-	db 28, WHIRLWIND
-	db 30, SHARPEN
-	db 34, AGILITY
-	db 41, NIGHT_SLASH
+	db 24, WHIRLWIND
+	db 28, DRILL_PECK
+	db 36, AGILITY
+	db 44, SHARPEN
+	db 48, NIGHT_SLASH
 	db 0
 
 PidgeyEvosMoves:

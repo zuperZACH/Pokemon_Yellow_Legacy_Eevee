@@ -444,9 +444,9 @@ SpecialTrainerMoves:
 	db 0
 
 	db RIVAL3, 2 ; Champion - 62, CLOYSTER, 60, GYARADOS, 63, ALAKAZAM, 62, VICTREEBEL, 63, CHARIZARD, 65, RAICHU, 0
-	db 5, 1, DOUBLE_TEAM  
-	db 1, 1, FLY
-	db 1, 3, ICE_BEAM
+	db 1, 1, DOUBLE_TEAM  
+	db 2, 1, FLY
+	db 2, 3, ICE_BEAM
 	db 3, 1, THUNDER_WAVE
 	db 5, 2, SWORDS_DANCE
 	db 5, 3, EARTHQUAKE
