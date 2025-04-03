@@ -3,6 +3,7 @@
 This hack is built off of Pokémon Yellow Legacy, made by cRz Shadows and TheSmithPlays. Play through the Gen 1 Pokémon game with Eevee by your side! Eevee will follow you around and battle with you; and you can even teach it special moves that no other pokémon can learn! Don't feel like playing with Eevee? Try out over 20 pokémon with new and different typings!
 
 List of changes can be found here: https://docs.google.com/document/d/1adj_oNKhipkenT_4ZTWLB0POlsQMqalu7mWJ8MDlMOA/edit?usp=sharing
+
 (not all changes are listed. Go to the commit history to see every single change made)
 
 ## Download and Play
