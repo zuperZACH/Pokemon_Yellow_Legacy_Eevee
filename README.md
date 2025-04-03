@@ -10,8 +10,7 @@ List of changes can be found here: https://docs.google.com/document/d/1adj_oNKhi
 * ### **You should use RGBDS version 0.6.1.**
 * To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
-|  Original Yellow Legacy credits |
-V                                 V
+↓  Original Yellow Legacy credits ↓
 ## A complete list of features can be found here:
 - Full doc: 
     - [Make a Copy (Recommended)](https://docs.google.com/document/d/1JlZRhW2fcBUd7y23DB7MGfJCU95FK_yJI-QdRFdMawI/copy)
