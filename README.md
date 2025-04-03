@@ -1,20 +1,17 @@
-# Pokémon Yellow Legacy
+# Pokémon Yellow Legacy: Special Eevee Edition!
 
-The Yellow Legacy project is the prequel to [Crystal Legacy](https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy) by content creator Patrick Smith ([TheSmithPlays](https://www.youtube.com/@TheSmithPlays)), and the second project in his planned Legacy series. It is based on [the Pokémon Yellow Disassembly](https://github.com/pret/pokeyellow). The Legacy project is focused on changing the base game in a way that adds quality of life additions and better balancing with the benefit of twenty years of hindsight. The primary goal of each mod is to keep the original feeling of the game while still making meaningful improvements for the player. This means that certain idiosyncrasies of the first generation of Pokémon games will remain, as they are considered an essential aspect to the core experience.
+This hack is built off of Pokémon Yellow Legacy, made by cRz Shadows and TheSmithPlays. Play through the Gen 1 Pokémon game with Eevee by your side! Eevee will follow you around and battle with you; and you can even teach it special moves that no other pokémon can learn! Don't feel like playing with Eevee? Try out over 20 pokémon with new and different typings!
 
-Pokémon Yellow exists in a unique role in the Pokémon franchise – it was the first truly significant revision of existing Pokémon games, and it still exists as the only core Pokémon game to be influenced by the anime. Furthermore, Pokémon Yellow introduced greater use of color, more challenging boss fights, availability for all three starters, and Pikachu as your companion. As a project to improve this game, Yellow Legacy seeks to find balance between furthering the unique niche of anime-influence while still representing the first generation of Pokémon as a whole.
-
-Yellow Legacy aims to give each Pokémon a special niche. Balance changes were made with the intent to keep the first generation of Pokémon feeling similar to their original incarnations, while also guaranteeing that using your favorite Pokémon will not significantly handicap your journey through Kanto. As the intent is to maintain the feeling of the Generation 1 games, Yellow Legacy will not change core aspects of the battle system such as the sleep status, critical hit chance being based off of speed, or the overpowered functionality of trapping moves such as Wrap or Fire Spin. 
-
-While Yellow Legacy is not designed as a “Kaizo” project, Pokémon trainer fights (especially bosses) throughout the game have been made more difficult. Difficulty is used as a tool to make the game as engaging as possible to the most amount of players. It will not be difficult for the sake of being difficult, but rather, to provide you with a challenge that gives reaching the title of Champion a feeling of genuine earned satisfaction. Major trainers will have Pokémon and attacks designed to counter players attempting to easily sweep through the fight with a single super-effective Pokémon. However, players will also have more opportunities to create unique teams of stellar Pokémon to tackle each major fight. Pokémon availability has also been altered throughout the world to provide appropriately-powerful Pokémon based on your progression through the game. Finally, all 151 Pokémon will be obtainable in a single playthrough, and a small amount of post-game content has been added as well.
-
+List of changes can be found here: https://docs.google.com/document/d/1adj_oNKhipkenT_4ZTWLB0POlsQMqalu7mWJ8MDlMOA/edit?usp=sharing
+(not all changes are listed. Go to the commit history to see every single change made)
 
 ## Download and Play
 
 * ### **You should use RGBDS version 0.6.1.**
 * To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
-
+|  Original Yellow Legacy credits |
+V                                 V
 ## A complete list of features can be found here:
 - Full doc: 
     - [Make a Copy (Recommended)](https://docs.google.com/document/d/1JlZRhW2fcBUd7y23DB7MGfJCU95FK_yJI-QdRFdMawI/copy)
