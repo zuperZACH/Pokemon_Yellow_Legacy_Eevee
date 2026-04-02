@@ -44,6 +44,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - **IRC:** [libera#pret][irc]
 
 ## Credits for Yellow Legacy Eevee:
+- zuperZACH - Main coder, and artist for every Eevee-related sprite, including the title screen, following sprites, and emotion portraits.
 - Plague von Karma - Developing the Eevee Tutor, in part using [Kanto Expansion Pak](https://github.com/PlagueVonKarma/kep-hack) optimisations.
 
 ## Credits For Yellow Legacy:
